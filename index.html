@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>NAZ Motors</title>
+</head>
+<body>
+  <!-- sidebar -->
+    <div id="sidebar">
+        <span id="close_btn">&#215</span>
+        <ul id="sidebar_items">
+            <li class="cta-btn "><button class="btn log-mob" data-bs-toggle="modal" data-bs-target="#loginModal">Log-in </button></li>
+            <li class="cta-btn "><button class="btn sign-mob" >Sign-up </button></li>
+            <li class="cta-btn"><a href="#">Testimonials</a></li>
+            <li class="cta-btn"><a href="#">Gallery</a></li>
+            <li class="cta-btn"><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <!--  modals -->
+   
+
+    <!-- login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center text-danger" id="exampleModalLabel">Login to take Appointment</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="d-grid justify-content-center">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label black-font">Email address: </label>
+                <input type="email" class="form-control" placeholder="example@gmail.com" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label black-font">Password :</label>
+                <input type="password" class="form-control"  placeholder="password" id="exampleInputPassword1">
+              </div>
+
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Appointment Modal -->
+    <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-secondary" id="exampleModalLabel">Get an Appointment with <b class="text-danger">NAZ</b> <span class="black-font">Auto Motors</span> </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form class="row g-3" autocomplete="on">
+                  <div class="col-md-6">
+                    <label for="inputName" class="form-label black-font">Name :</label>
+                    <input type="text" class="form-control" id="inputName" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputNumber" class="form-label black-font">Phone No. :</label>
+                    <input type="tel" class="form-control" id="inputNumber" pattern="[0-9]{10}" required>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="car-brand" class="black-font :">Car-Brand :</label>
+                   <input type="text" class="form-control" id="car-brand">
+                  </div>
+                  <div class="col-md-3">
+                    <label for="car-Model" class="black-font :">Model :</label>
+                   <input type="text" class="form-control" id="car-Model">
+                  </div>
+                  <div class="col-md-5">
+                    <label for="inputRC" class="form-label black-font">RC No. (Number Plate) :</label>
+                    <input type="text" class="form-control" id="inputZip">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputZip" class="form-label black-font">Zip Code :</label>
+                    <input type="text" class="form-control" id="inputZip">
+                  </div>
+                  <div class="col-md-12">
+                    <label for="inputIssue" class="form-label black-font">What is the Issue?</label>
+                    <textarea name="inputIssue" id="inputIssue" class="form-control"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+    </div>
+     
+
+    <header >
+        <nav class="navi">
+            <div id="burger_menu"><i class="fa-solid fa-bars"></i></div>
+            <li class="logo"><img class="img" src="img/naazz.jpg" alt="logo"></li>
+            <ul id="nav-item-container">
+              <li class="cta-btn-desk"><button class="login btn log-and-sign-desk" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button></li>
+              <li class="cta-btn-desk"><button class="signup btn log-and-sign-desk" data-bs-toggle="modal" data-bs-target="#signupModal">Signup</button></li>
+                <li class="cta-btn-desk"><a href="#testimonials">Testimonials</a></li>
+                <li class="cta-btn-desk"><a href="#">Gallery</a></li>
+                <li class="cta-btn-desk no-border"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        
+
+
+        <div id="carouselExampleDark" class="carousel carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <!-- <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <picture class="" > 
+                <source media="(max-width: 720px)" srcset="img/mob_slide2.jpeg">
+                <img src="img/desk_slide1.jpeg" class="d-block w-100" alt="...">
+              </picture>
+              <div class="carousel-caption ">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <picture>
+                <source media="(max-width: 720px)" srcset="img/mob_slide3.jpeg">
+                <img src="img/desk_slide3.jpeg" class="d-block w-100" alt="...">
+              </picture>
+              <div class="carousel-caption  ">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <!-- <div class="carousel-item">
+              <picture>
+                <source media="(max-width: 720px)" srcset="img/mob_slide3.jpeg">
+                 <img  src="img/desk_slide3.jpeg" class="d-block w-100" alt="...">
+              </picture>
+              <div class="carousel-caption  d-md-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+              </div>
+            </div> -->
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </header>
+    <button id="appointment" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+      Book Appointment
+    </button>
+    <main class="d-flex">
+      <div class="container-fluid  color-white my-3 mx-2 py-1" id="testimonials">
+        <section id="test-head"><h1>Testimonials</h1> </section>
+        <div id="test-main" class="row borders">
+          <div class="test-containers  col-md-4">
+            <div class="google-logo">
+              <i class="fa-brands fa-google-plus"></i>
+            </div>
+            <div class="test-text">
+              <q>
+                Very friendly and service oriented workshop. Had the alternator and ac belts changed and they did a prompt and an efficient job. I was happy with the service thought it was my fist time. I recommend them to anybody whose car needs a service.
+              </q>
+            </div>
+            <div class="test-name">
+              <h3>
+                - Jacinta D
+              </h3>
+            </div>
+          </div>
+          <div class="test-containers col-md-4">
+            <div class="google-logo">
+              <i class="fa-brands fa-google-plus"></i>
+            </div>
+            <div class="test-text">
+              <q>Very friendly staff, fast service and reasonable price, they do their best to help the customer 👍
+              </q>
+            </div>
+            <div class="test-name">
+              <h3>
+                - Dikshita C
+              </h3>
+            </div>
+          </div>
+          <div class="test-containers col-md-4">
+            <div class="google-logo">
+              <i class="fa-brands fa-google-plus"></i>
+            </div>
+            <div class="test-text">
+              <q>
+                Very good people working with sincere and honest hardworking and helpful behavior plus they are quick in their job and good sucess rate as they have a good know how
+              </q>
+            </div>
+            <div class="test-name">
+              <h3>
+                - Soham A
+              </h3>
+            </div>
+          </div>
+        </div>        
+      </div>
+
+    
+    </main>
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+      </ul>
+      <p class="text-center text-muted">© 2022 Naz Auto Motors</p>
+    </footer>
+    <!-- bootstrap javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
+</html>
